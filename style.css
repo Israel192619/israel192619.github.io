@@ -20,6 +20,16 @@ header {
     color: #ECF0F1;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #ECF0F1;
+    cursor: pointer;
+    z-index: 2;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -49,6 +59,7 @@ nav ul li a:hover {
     justify-content: space-between;
     padding: 50px 40px;
     background-color: #ffffff;  
+    
 }
 
 .texto-heroico {
@@ -604,8 +615,43 @@ nav ul li a:hover {
         width: 100%;
         height: auto;
     }
-}
+    
 
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2C3E50;
+        position: absolute;
+        top: 80px;
+        right: 40px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+      }
+    
+      nav ul li {
+        margin: 10px 0;
+      }
+    
+      nav ul.show {
+        display: flex;
+      }
+    
+      .menu-toggle {
+        display: block;
+      }
+    
+      header {
+        position: relative;
+      }
+}
+@media screen and (max-width: 660px) {
+    .logos{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 480px) {
     header {
         padding: 10px 15px;

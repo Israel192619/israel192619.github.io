@@ -13,8 +13,9 @@
 <body>
   <header>
     <div class="logo">Los <br> Mercadólogos.</div>
+    
     <nav>
-      <ul>
+      <ul id="menu">
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Servicios</a></li>
         <li><a href="#">Portafolio</a></li>
@@ -22,6 +23,9 @@
         <li><a href="#">Contáctanos</a></li>
       </ul>
     </nav>
+    <button class="menu-toggle" id="menu-toggle">
+      <span class="fa fa-bars"></span>
+    </button>
   </header>
 
   <section class="seccion-heroica">
@@ -114,10 +118,10 @@
       <div class="info">
         <div class="info-contacto">
           <div class="email"><strong>Email</strong><br><a href="#">mercadlogos@gmail.com</a></div>
-          <div class="numero"><strong>Teléfono</strong><br>+591 789 456 123</div>
+          <div class="numero"><strong>Teléfono</strong><br>+591 789-456-123</div>
         </div>
         <div class="info-contacto-direccion">
-          <div><strong>Dirección</strong><br>Av. Circunvalación #123, Tarija</div>
+          <div><strong>Dirección</strong><br>Av. Circunvalación #123, Cochabamba</div>
         </div>
       </div>
       <div class="iconos-sociales">
@@ -223,7 +227,14 @@
   closeGlass.addEventListener("click", () => glassModal.style.display = "none");
   window.addEventListener("click", e => { if (e.target === glassModal) glassModal.style.display = "none"; });
 </script>
+<script>
+  const toggleButton = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
