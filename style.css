@@ -1,0 +1,654 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', cursive;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #2C3E50;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ECF0F1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #BDC3C7;
+    padding: 10px 16px;
+    border: 1px solid #34495E;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+}
+
+nav ul li a:hover {
+    background-color: #34495E;
+    border-color: #2C3E50;
+    color: #ECF0F1;
+}
+
+.seccion-heroica {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 40px;
+    background-color: #ffffff;  
+}
+
+.texto-heroico {
+    flex: 1;
+    font-size: 42px;
+    line-height: 1.4;
+    color: #2C3E50;
+    font-weight: 700;
+}
+
+.imagen-heroica {
+    margin-top: 40px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    min-height: 350px;
+    background-image: url('https://blog.up.edu.mx/hs-fs/hubfs/mercad%C3%B3logo-estrat%C3%A9gico.png?width=800&height=453&name=mercad%C3%B3logo-estrat%C3%A9gico.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imagen-heroica .botones {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-heroica .botones button {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 12px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin: 10px 40px;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 3px 2px rgba(0, 0, 0, 0.479);
+    transition: all 0.3s ease;
+}
+
+.imagen-heroica .botones button:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: scale(1.05);
+}
+
+.logos {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    border-top: 2px solid #4d474763;
+    border-bottom: 2px solid #4d474763;
+    width: calc(100% - 3cm);
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.caja-logo {
+    padding: 15px 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    transition: box-shadow 0.3s ease;
+}
+
+.caja-logo:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.servicios {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.cabecera-servicios p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #34495E;
+}
+
+.contenedor-imagen-servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    height: 420px;
+}
+
+.img-izquierda,
+.img-centro,
+.caja-fiabilidad {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-izquierda {
+    border: 1px solid #ccc;
+    width: 25%;
+    aspect-ratio: 1 / 1;
+    left: 10%;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.img-centro {
+    box-shadow: -10px 5px 40px;
+    border: 1px solid #bbb;
+    width: 60%;
+    border-radius: 50%;
+    aspect-ratio: 16 / 9;
+    left: 20%;
+    z-index: 2;
+}
+
+.caja-fiabilidad {
+    left: 70%;
+    width: 15%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #34495E;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.ofrecimientos .titulo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.ofrecimientos h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.rejilla-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 4%;
+    max-width: 100%;
+    margin: 0 auto 30px;
+}
+
+.oferta {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(50% - 30px);
+    color: #2C3E50;
+}
+
+.oferta .separacion {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.oferta .separacion span {
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid #2f2121;
+}
+.oferta .numero{
+    font-size: 35px;
+    color: #E74C3C;
+}
+.oferta .descripcion{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.boton-mas {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: #1ABC9C;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+.boton-mas:hover {
+    background-color: #16A085;
+}
+.proyectos {
+    padding: 60px 40px;
+    background-color: #fafafa;
+}
+.proyectos h2{
+    margin-bottom: 30px;
+}
+
+.botones-filtro {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+  
+.botones-filtro button {
+    padding: 10px 18px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+.botones-filtro button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+.tarjetas-proyecto {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    min-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.tarjeta img {
+    background-color: #eee;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 8px;
+}
+.tarjeta h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #34495E;
+}
+.boton-ver {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: 1px solid #000;
+    background-color: #3498DB;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-ver:hover {
+    background-color: #2980B9;
+}
+
+.contacto {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.formulario-suscripcion {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.formulario-suscripcion .form-contenido{
+    border: 1px solid #a4a1a1;
+    border-radius: 10px;
+    margin: 30px 0;
+    width: 40%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.formulario-suscripcion .form-contenido:focus-within{
+    border: 1px solid #aaa;
+    box-shadow: 0px 2px 5px rgb(122, 196, 245);
+  }
+
+.formulario-suscripcion .form-contenido input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    
+}
+.formulario-suscripcion .form-contenido input::placeholder{
+    color: #FFFFFF;
+}
+
+.formulario-suscripcion .form-contenido button {
+    width: 30%;
+    padding: 10px 20px;
+    border: 1px solid #746f6f81;
+    background-color: #1ABC9C;
+    color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.formulario-suscripcion .form-contenido button:hover {
+    background-color: #16A085;
+    color: #ddd;
+}
+
+.contacto .informacion {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.info-contacto {
+    display: flex;
+    justify-content: space-around;
+    gap: 90px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.info-contacto .email a{
+    color: #FFFFFF;
+}
+.info .info-contacto-direccion{
+    text-align: left;
+    display: flex;
+    justify-content: start;
+}
+
+
+.iconos-sociales {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 20px;
+}
+
+.iconos-sociales button {
+    background: #ddd;
+    text-align: center;
+    width: 50px;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.iconos-sociales button:hover {
+    background-color: #ccc;
+}
+
+  
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+  
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.cerrar {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+
+.oferta, .tarjeta, .caja-logo {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.glass-content {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.close-glass {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.carousel img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+.nav-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.3);
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#prev { left: 0; }
+#next { right: 0; }
+  
+@media screen and (max-width: 768px) {
+    
+
+    .seccion-heroica {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .texto-heroico {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .imagen-heroica {
+        width: 100%;
+        margin-left: 0;
+        min-height: 250px;
+    }
+
+    
+
+    .servicios, .proyectos {
+        padding: 30px 20px;
+    }
+
+    .tarjetas-proyecto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 80%;
+    }
+
+    .formulario-suscripcion .form-contenido {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .formulario-suscripcion .form-contenido input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .formulario-suscripcion .form-contenido button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-btn {
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .seccion-heroica {
+        padding: 20px;
+    }
+
+    .texto-heroico {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .imagen-heroica {
+        min-height: 200px;
+        margin-left: 0;
+    }
+
+    .servicios, .proyectos {
+        padding: 20px;
+    }
+
+    .tarjetas-proyecto {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+}   
